@@ -1,0 +1,585 @@
+@charset "UTF-8";
+
+/*  共通
+------------------------------------*/
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body{
+    font-feature-settings: "palt";
+    -webkit-font-feature-settings: "palt";
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3%;
+}
+.headtitle{
+    text-transform: uppercase;
+    text-align: center;
+    color: #D136D1;
+    font-size: 3.2rem;
+    font-weight: bold;
+    padding: 110px 0 90px;
+}
+.headtitle-sub{
+    color: white;
+    font-size: 1.2rem;
+    display: block;
+}
+
+/*  TOP PAGE
+------------------------------------*/
+.top-bg{
+    background: linear-gradient( 135deg, #0e002e 0%, #1e092b 23%, #320c65 49%, #a01b7c 80%, #c21780 100% );
+}
+/* ヘッダーメニュー */
+.header-wrap{
+    position: fixed;
+    width: 100%;
+    top: 20px;
+    left: 30px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+.header-left{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #D136D1;
+}
+.header-right{
+    display: flex;
+}
+.menu{
+    margin-right: 60px;
+    margin-top: 10px;
+}
+.header-right a{
+    color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+/* メインビジュアル */
+.main{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-image: url(../完成版データ/img/mv.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    height: 730px;
+}
+.main-text{
+    margin-top: 10%;
+}
+.main-text p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #D136D1;
+    margin-bottom: 10px;
+}
+.main-text h1{
+    font-size: clamp(24px, 10vw, 100px);     /* 最小値,中間値,最大値; */
+    color: white;
+    line-height: 1.1;
+    font-weight: bold;
+}
+.main-text h3{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+}
+.main-text a{
+    font-weight: bold;
+    color: white;
+    font-size: 0.8rem;
+}
+.btn{
+    display: inline-block;
+    background: linear-gradient(135deg, #c41a7f 0%, #664bbf 100%);
+    padding: 24px 100px;
+    border-radius: 50px;
+    box-shadow: 0 10px #f50896;
+    transition: .4s;
+}
+.logo{
+    transform: rotate(-15deg) translateX(30px) translateY(-60px);
+}
+.speaker-name{
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+.small-name{
+    font-size: 0.88rem;
+}
+.label-name{
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+.btn:hover{
+    transform: translateY(5px);
+    box-shadow: 0 5px #f50896;
+}
+
+/*  ABOUT PAGE
+------------------------------------*/
+.about-bg{
+    background: black;
+    padding-bottom: 110px;
+}
+.content-wrap{
+    display: flex;
+}
+.content-wrap img{
+    width: 40%;
+}
+.about-text{
+    color: white;
+    font-weight: bold;
+    margin-left: 5%;
+}
+.theme{
+    font-size: 1.1rem;
+    margin-top: 110px;
+}
+.theme-title{
+    font-size: 2.5rem;
+    color: #D136D1;
+    margin: 10px 0 30px;
+}
+.text-item{
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+.data{
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+}
+.data span{
+    font-weight: normal;
+    margin-left: 12%;
+}
+.about-text p:last-of-type>span{
+    margin-left: 9%;
+}
+.about-text a{
+    font-weight: bold;
+    color: white;
+    font-size: 0.9rem;
+}
+.about-text .btn{
+    padding: 20px 80px;
+    margin-top: 30px
+}
+
+/*  SPEAKER PAGE
+------------------------------------*/
+.speaker-bg{
+    background: linear-gradient( 135deg, #0e002e 0%, #1e092b 23%, #320c65 49%, #a01b7c 80%, #c21780 100% );
+    padding-bottom: 110px;
+}
+.probox{
+    display: flex;
+    margin-bottom: 60px;
+}
+.probox img{
+    width: 40%;
+    height: 100%;
+}
+.probox:nth-child(even){
+    flex-direction: row-reverse;
+}
+.en-name{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #D136D1;
+}
+.ja-name{
+    font-size: 1rem;
+    color: white;
+    display: block;
+}
+.profile{
+    color: white;
+    font-weight: bold;
+    line-height: 1.7;
+    margin-top: 41px;
+    font-size: 0.85rem;
+}
+.item-box{
+    margin-right: 60px;
+}
+.mihoko-box>.item-box{
+    margin-left: 60px;
+    margin-right: 0;
+}
+
+/*  SESSION PAGE
+------------------------------------*/
+.session-bg{
+    background: black;
+    padding-bottom: 110px;
+}
+.session-item{
+    display: flex;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(209, 54, 209, 0.7);
+    padding: 42px 0 42px;
+}
+.session-time{
+    font-size: 1rem;
+    margin: 0 70px 0 30px;
+}
+.session-title{
+    font-size: 1.1rem;
+    color: #D136D1;
+    margin-bottom: 15px;
+}
+.seesion-content{
+    font-size: 0.7rem;
+    line-height: 1.7;
+}
+
+/*  REGISTOR PAGE
+------------------------------------*/
+.registor-bg{
+    padding-bottom: 110px;
+    background-image: url(../完成版データ/img/bg.jpg);
+    background-repeat: repeat;      /* 画像が小さいので繰り返し配置する */
+}
+.registor{
+    background-color: black;
+    border: 5px solid #D136D1;
+    border-radius: 10px;
+}
+.form{
+    padding: 87px 60px 100px;
+}
+.form-item{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 33px;
+}
+.form-requier{
+    font-size: 0.8rem;
+    color: #D136D1;
+    margin-left: 16px;
+}
+input,textarea,select{
+    color: #333;
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    padding: 6px;
+}
+input[type="text"],input[type="email"],select{
+    width: 300px;
+}
+input[type="tel"]{
+    width: 200px;
+}
+textarea{
+    min-width: 600px;
+    min-height: 200px;
+}
+.form-title{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+.form-radio{
+    margin-right: 30px;
+    font-size: 0.8rem;
+}
+.form-select{
+    font-size: 0.85rem;
+}
+button{
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.form-btn{
+    text-align: center;
+    margin-top: 60px;
+}
+
+/*  FOOTERT PAGE
+------------------------------------*/
+footer {
+    display: grid;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 70px 20px;
+    background-color: #141414;
+    place-items: center;
+  }
+/* トップへ戻るボタン */
+.page-top {
+    display: none;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 1;
+  }
+  .page-top__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c41a7f 0%, #664bbf 100%);
+    cursor: pointer;
+  }
+  .page-top__icon {
+    font-size: 40px;
+  }
+  .page-top__link:hover {
+    opacity: 0.8;
+  }
+
+
+  /*  メディアクエリー
+------------------------------------*/
+@media screen and (max-width:767px){
+    /* ---------- 共通部分 ---------- */
+    .headtitle{
+        font-size: 1.7rem;
+        padding: 40px 0 20px;
+    }
+    .headtitle-sub{
+        font-size: 0.7rem;
+    }
+
+    /* ---------- TOP PAGE ---------- */
+    /* HEADER */
+    .header-wrap{
+        top: 15px;
+        left: 20px;
+    }
+    .header-left{
+        font-size: 1.3rem;
+    }
+    .header-right{
+        margin-right: 20px;
+        transform: translateY(-10px);
+    }
+    .menu{
+        margin-right: 20px;
+    }
+    .header-right a{
+        font-size: 0.6rem;
+    }
+    /* メインビジュアル */
+    .main{
+        flex-direction: column;
+        background-size: contain;
+        background-position: right -80px bottom;
+        height: 480px;
+    }
+    .main-text{
+        margin-top: 10%;
+        margin-left: 20px;
+    }
+    .main-text p{
+        font-size: 0.8rem;
+        width: 40%;
+        line-height: 1.4;
+        margin: 30px 0 15px;
+    }
+    .main-text h3{
+        font-size: 1rem;
+        margin:5px 0 35px;
+    }
+    .main-text a{
+        font-size: 0.8rem;
+    }
+    .btn{
+        padding: 20px 60px;
+    }
+    .logo{
+        transform: rotate(-15deg) translateX(-5px) translateY(-100px);
+        width: 35%;
+    }
+    .speaker-name{
+        font-size: 0.58rem;
+    }
+    .small-name{
+        font-size: 0.57rem;
+    }
+    .label-name{
+        font-size: 0.5rem;
+    }
+
+    /* ---------- ABOUT PAGE ---------- */
+    .about-bg{
+        padding-bottom: 50px;
+    }
+    .content-wrap{
+        flex-direction: column;
+    }
+    .content-wrap img{
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+    .about-text{
+        margin-left: 0;
+    }
+    .theme{
+        font-size: 1rem;
+        margin-top: 35px;
+    }
+    .theme-title{
+        font-size: 2rem;
+        margin: 15px 0 25px;
+    }
+    .text-item{
+        margin-bottom: 20px;
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+    .data{
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+    }
+    .data span{
+        margin-left: 12%;
+    }
+    .about-text p:last-of-type>span{
+        margin-left: 8.5%;
+    }
+    .about-text a{
+        font-size: 0.8rem;
+    }
+    .about-text .btn{
+        padding: 20px 60px;
+        margin-top: 15px
+    }
+
+    /* ---------- SPEAKER PAGE ---------- */
+    .speaker-bg{
+        padding-bottom: 0;
+    }
+    .probox{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 45px;
+    }
+    .probox img{
+        width: 100%;
+    }
+    .probox:nth-child(even){
+        flex-direction: column;
+    }
+    .en-name{
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+    .ja-name{
+        font-size: 0.7rem;
+    }
+    .profile{
+        margin-top: 30px;
+        font-size: 0.7rem;
+    }
+    .item-box{
+        margin-right: 0;
+    }
+    .mihoko-box>.item-box{
+        margin-left: 0;
+    }
+
+    /* ---------- SESSION PAGE ---------- */
+    .session-bg{
+        padding-bottom: 50px;
+    }
+    .session-item{
+        padding: 25px 0 25px;
+    }
+    .session-item>div{
+        width: 100%;
+    }
+    .session-time{
+        font-size: 0.88rem;
+        margin: 0;
+    }
+    .session-title{
+        font-size: 0.8rem;
+    }
+    .seesion-content{
+        font-size: 0.6rem;
+    }
+
+    /* ---------- REGISTOR PAGE ---------- */
+    .registor-bg{
+        padding: 0 20px 50px 20px;
+    }
+    .form{
+        padding: 30px 25px;
+    }
+    .form-title{
+        font-size: 0.8rem;
+    }
+    .form-requier{
+        font-size: 0.75rem;
+        margin-left: 10px;
+    }
+    .form-radio{
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"],input[type="email"],
+    input[type="tel"],select{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    textarea{
+        min-width: 100%;
+        font-size: 0.8rem;
+    }
+    .form-select{
+        font-size: 0.8rem;
+    }
+    button{
+        font-size: 0.85rem;
+    }
+
+    /* ---------- FOOTER PAGE ---------- */
+    footer {
+        padding: 40px 40px;
+        font-size: 0.6rem;
+      }
+
+    /* ---------- トップへ戻るボタン ---------- */
+    .page-top {
+        right: 20px;
+        bottom: 20px;
+      }
+    .page-top__link {
+        width: 50px;
+        height: 50px;
+      }
+      .page-top__icon {
+        font-size: 25px;
+      }
+}
